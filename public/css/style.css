@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-gray: rgb(147, 153, 158);
+  --color-blue: dodgerblue;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+}
+
+.chat__section {
+  display: flex;
+  flex-direction: column;
+  height: 530px;
+  max-width: 450px;
+  margin: 4rem auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.chat__navbar {
+  margin-bottom: 1rem;
+  background: var(--color-blue);
+  color: white;
+  padding: 1.2rem 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 2px;
+}
+
+.chat__content {
+  padding: 1.2rem;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.chats {
+  overflow-y: hidden;
+}
+
+.chat {
+  display: flex;
+  text-align: center;
+  gap: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+i {
+  background-color: var(--color-gray);
+  color: white;
+  padding: 0.6rem 0.6rem;
+  border-radius: 50%;
+}
+
+.message {
+  background: var(--color-blue);
+  color: white;
+  padding: 0.6rem 0.5rem;
+  border-radius: 0.5rem 0.9rem;
+
+  inline-size: 150px;
+  overflow-wrap: break-word;
+}
+
+.username {
+  font-size: 1rem;
+}
+
+.outgoing .chat__message_name .username {
+  text-align: start;
+}
+
+.ingoing .chat__message_name .username {
+  text-align: end;
+}
+
+.input__form {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.input__style {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  outline: 0;
+  border-radius: 1rem;
+  border: 2px solid white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0.6rem 1.2rem;
+  transition: 0.2s ease;
+}
+
+.input__style:focus {
+  border: 2px solid rgb(75, 164, 252);
+}
+
+button {
+  background: var(--color-blue);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  outline: 0;
+  border: 1px solid var(--color-blue);
+  padding: 0.5rem 1.3rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.input__form_container {
+  padding: 0.3rem 0.5rem;
+}
+
+.chat__icon {
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.ingoing {
+  justify-content: flex-end;
+}
+
+.ingoing .chat__icon {
+  order: 2;
+}
+
+.ingoing .chat__message_name {
+  order: 1;
+}
