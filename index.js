@@ -4,6 +4,7 @@ const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.json());
@@ -24,4 +25,4 @@ io.on("connection", (socket) => {
 });
 
 const port = process.env.PORT || 3000;
-server.listen(port, () => console.log(port));
+server.listen(port);
